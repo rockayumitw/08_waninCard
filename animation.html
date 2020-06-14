@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./_scss/_vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="./_scss/_vendor/slick.css">
+    <link rel="stylesheet" href="./_scss/_vendor/slick-theme.css">
+    <script src="./_js/_vendor/jquery-3.4.1.min.js"></script>
+    <script src="./_js/_vendor/bootstrap.js"></script>
+    <script src="./_js/_vendor/slick.min.js"></script>
+    <script src="./_js/_vendor/gsap.js"></script>
+    <link rel="stylesheet" href="./_scss/main.css">
+    <title>#Day16-20 wanin chinese new year Card</title> 
+</head>
+
+<body>
+    <div class="wrap">
+        <!--公司名-->
+        <div class="companyNameArea">
+            <div class="companyName">
+                <div class="name name-01 normal"></div>
+            </div>
+            <div class="companyName">
+                <div class="name name-02 normal"></div>
+            </div>
+            <div class="companyName">
+                <div class="name name-03 normal"></div>
+            </div>
+            <div class="companyName">
+                <div class="name name-04 normal"></div>
+            </div>
+        </div>
+
+        <!--中心動畫-->
+        <div class="centerArea">
+            <!--底部中心-->
+            <div class="cardBottom mx-auto"></div>
+            <!--燈籠-->
+            <div class="lamp"><img src="./_img/lamp.png" alt=""></div>
+
+            <div class="animationLayerArea">
+                <!--第一層動畫-2020祝賀-->
+                <div class="slider">
+                <div class="slide">
+                <div class="animation-layer animation-layer-01 active">
+                    <img class="year" src="./_img/a01.png" alt="">
+                    <img class="star" src="./_img/light.png" alt="">
+                    <div class="txt">
+                        <span>Happy</span>
+                        <span>Chinese</span>
+                        <span>New Year</span>
+                    </div>
+                    <img class="cloud cloud-left" src="./_img/cloud.png" alt="">
+                    <img class="cloud cloud-right" src="./_img/cloud.png" alt="">
+                    <img class="flower flower-big flower-front" src="./_img/a04.png" alt="">
+                    <img class="flower flower-big flower-back" src="./_img/a02.png" alt="">
+                    
+                    <img class="flower flower-small flower-top" src="./_img/a03.png" alt="">
+                    <img class="flower flower-small flower-right" src="./_img/a03.png" alt="">
+                    <img class="flower flower-small flower-bottom" src="./_img/a03.png" alt="">
+                </div>
+                </div>
+                <!--第二層動畫-歲月織財-->
+                <div class="slide">
+                <div class=" animation-layer animation-layer-02 ">
+                    <!--歲月織財-->
+                    <img class="slogan slogan-top splitword-01" src="./_img/b01.png" alt="">
+                    <img class="slogan slogan-top splitword-02" src="./_img/b02.png" alt="">
+                    <img class="slogan slogan-top splitword-03" src="./_img/b03.png" alt="">
+                    <img class="slogan slogan-top splitword-04" src="./_img/b04.png" alt="">
+                    <!--網銀-->
+                    <img class="title splitword-01" src="./_img/b05.png" alt="">
+                    <img class="title splitword-02" src="./_img/b06.png" alt="">
+                    <!--煙火--->
+                    <img class="firework firework-01" src="./_img/firework2.png" alt="">
+                    <img class="firework firework-02" src="./_img/firework2.png" alt="">
+                    <!--鼠耀新春-->
+                    <img class="slogan slogan-bottom splitword-01" src="./_img/b07.png" alt="">
+                    <img class="slogan slogan-bottom splitword-02" src="./_img/b08.png" alt="">
+                    <img class="slogan slogan-bottom splitword-03" src="./_img/b09.png" alt="">
+                    <img class="slogan slogan-bottom splitword-04" src="./_img/b10.png" alt="">
+                    <!--鼠公仔-->
+                    <img class="mouse" src="./_img/mouse.png" alt="">
+                    <!---cloud--->
+                    <img class="cloud cloud-top" src="./_img/cloud3.png" alt="">
+                    <img class="cloud cloud-bottom" src="./_img/cloud3.png" alt="">
+                </div>
+                </div>
+                <!--第三層動畫-財源廣進-->
+                <div class="slide">
+                <div class=" animation-layer animation-layer-03">
+                    <!--財源廣進-->
+                <img class="slogan splitword-01" src="./_img/c01.png" alt="">
+                <img class="slogan splitword-02" src="./_img/c02.png" alt="">
+                <img class="slogan splitword-03" src="./_img/c03.png" alt="">
+                <img class="slogan splitword-04" src="./_img/c04.png" alt="">
+
+                <!--扇子-->
+                <div class="fan"></div>
+
+                <!--扇子-->
+                <img class="cloud" src="./_img/cloud2.png" alt="">
+
+                </div>
+                </div>
+            </div>
+            </div>
+
+            <div class="progressArea">
+                <div class="progress"></div>
+            </div>
+        </div>
+
+
+        <!--底部圓圈-->
+        <div class="circleArea">
+            <div class="circle circle-left">
+                <img src="./_img/dot01.png" alt="">
+            </div>
+            <div class="circle circle-right">
+                <img src="./_img/dot02.png" alt="">
+            </div>
+        </div>
+
+        <!--跑馬燈-->
+        <div class="marqeeArea">
+            <div class="marqee-top"></div>
+            <div class="marqee-right"></div>
+            <div class="marqee-bottom"></div>
+            <div class="marqee-left"></div>
+        </div>
+
+        <!--logo-->
+        <a class="logo" href="/">
+            <img width="100" src="./_img/logo.png" alt="">
+        </a>
+    </div>
+</body>
+
+<script src="./_js/animation.js"></script>
+</html>

@@ -1,0 +1,177 @@
+$random:"?"+random(10000);
+
+//動畫前綴
+$experimental-support-for-webkit : true;
+$experimental-support-for-mozilla: true;
+$experimental-support-for-opera: true;
+$experimental-support-for-microsoft: true;
+$experimental-support-for-khtml: false;
+
+//預設背景圖
+$default_Background:'../_img/bg.jpg';
+
+//字體
+$font-Style:"Microsoft JhengHei";
+
+//主要顏色
+$main-bg-color:#f9f0e7;
+$sub-bg:#dbcc96;
+
+$circle-color:rgba(193, 175, 114, 0.38);
+
+//marqee
+$marqeeList:'top','right','bottom','left';
+$marqee-height:88px;
+$marqee-text:'../_img/text.png';
+
+//companyName
+$companyNameList:'01','02','03','04';
+$companyNameBg:(
+    '01':'../_img/txt06.png',
+    '01-hover':'../_img/txt02.png',
+    '02':'../_img/txt05.png',
+    '02-hover':'../_img/txt01.png',
+    '03':'../_img/txt08.png',
+    '03-hover':'../_img/txt04.png',
+    '04':'../_img/txt07.png',
+    '04-hover':'../_img/txt03.png',
+);
+
+$cardBottomBg:'../_img/circle.png';
+
+$txt-border:#e7d9b1;
+$txt-color:#c1af72;
+
+$sloganList:'01','02','03','04';
+
+$fan:'../_img/fan.png';
+
+$z-index: (
+  logo             : 101,
+  marquee          : 100,
+  lamp             : 90,
+  centerArea       : 50,
+  companyNameArea  : 41,
+  circleArea       : 40,
+);
+
+
+//按鈕命名
+//普通主要使用的按鈕
+$btn-primary:(
+    'txt':#fff,
+    'bg':black,
+    'border':green,
+    'hover':green,
+    'normal':black,
+);
+
+//取消按鈕
+$btn-cancle:(
+    'txt':#fff,
+    'bg':#fff,
+    'border':rgba(255,255,255,0.3),
+    'normal':#fff,
+    'hover':#fff,
+);
+
+//確認按鈕
+$btn-sure:(
+    'txt':#fff,
+    'bg':#fff,
+    'border':rgba(255,255,255,0.3),
+    'normal':#fff,
+    'hover':#fff,
+);
+
+//tag
+$tag:(
+    'system':#f00,
+    'events':#E1B458
+);
+
+//字體顏色
+$font-color:(
+    'normal':#fff,
+    'link':#fff,
+    'danger':#f00,
+    'sucess':#fff,
+);
+
+//選單字體顏色
+$menu:(
+    'normal':#fff,
+    'hover':#fff
+);
+
+$sub-menu:(
+    'normal':#fff,
+    'hover':#fff
+);
+
+
+//推薦專頁順置頂順序
+$top-list:"/Content/img/mobile_icon_top_1_text.png"+$random,"/Content/img/mobile_icon_top_2_text.png"+$random,"/Content/img/mobile_icon_top_3_text.png"+$random;
+
+//btn-圖片
+$btns:'newArticle','res';
+$btnList:(
+    'newArticle':'/Content/img/mobile_icon_button_issue_normal.png'+$random,
+    'res':'/Content/img/mobile_icon_button_issue_normal.png'+$random
+);
+
+//專頁列表icon
+$icons:'message','shopList','favoriates';
+$iconsList:(
+'shopList':"/Content/img/mobile_icon_list_normalIcon.png"+$random,
+'message':"/Content/img/mobile_icon_chart_normalIcon.png"+$random,
+'favoriates':"/Content/img/mobile_icon_favorite_normal_insideIcon.png"+$random,
+'favoriates-icon_already':"/Content/img/mobile_icon_favorite_normal_inside_topIcon.png"+$random
+);
+
+$item-bg:'/Content/img/test.png'+$random;
+$sendMessage:'/Content/img/mobile_icon_message_send_normal.png'+$random;
+$mobileIconInputEdit:"/Content/img/mobile_icon_input_edit.png"+$random;
+
+//字體大小   
+$fontSize:(
+    'xxs':3vmin,
+    'xs':3.2vmin,
+    'sm':3.7vmin,
+    'md':4.5vmin,
+    'lg':4.8vmin,
+    'xl':5.5vmin,
+    'xxl':8vmin,
+);
+
+//photo大小
+$l-photo:(
+    xs:7.5vmin,     
+    md:9.335vmin,  
+    lg:12.8vmin,   
+);
+
+$iconSize:(
+    favoriatesIcon:5.2vmin, 
+    shield:5vmin,           
+    l-favoriates:9.5vmin,   
+    topIcon:10.135vmin      
+);
+
+$breakpoints:(
+    xxs: 320px,//ios se5
+    xs : 575.98px,
+    sm : 767.98px,
+    md : 991.98px,
+    lg : 1199.98px
+);
+
+// $z-index: (
+//   modal              : 200,
+//   navigation         : 100,
+//   footer             : 90,
+//   triangle           : 60,
+//   navigation-rainbow : 50,
+//   share-type         : 41,
+//   share              : 40,
+// );

@@ -1,0 +1,40 @@
+//中心動畫
+.centerArea {
+    width: 650px;
+    height: 650px;
+    @include fixed($top:50%, $left:50%);
+    @include z-index(centerArea);
+    @include transform(translateX(-50%) translateY(-50%) scale(0.7));
+    @include media-max("md") {
+      @include transform(translateX(-50%) translateY(-50%) scale(0.6));
+    }
+    @include media-max("sm") {
+      @include transform(translateX(-50%) translateY(-50%) scale(0.45));
+    }
+    @include media-max("xs") {
+      @include transform(translateX(-50%) translateY(-50%) scale(0.4));
+    }
+  
+    .cardBottom {
+      @include imgBg($cardBottomBg, 650px, 650px, false, contain, no-repeat, center center);
+    }
+    
+    //燈籠
+    .lamp {
+      @include absolute($top:14.5%, $right:0%);
+      @include z-index(lamp);
+      @include transform-origin(174px 0px);
+      @include animation(lightMove, 2s, $timing-function: linear, $delay: 0s, $iteration-count: infinite , $direction: alternate);
+    }
+  }
+
+
+//燈籠動畫
+@include keyframes(lightMove){
+    0%{
+       @include transform(rotate(5deg))
+    }
+    100%{
+        @include transform(rotate(-10deg))
+    }
+}

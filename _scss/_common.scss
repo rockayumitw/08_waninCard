@@ -1,0 +1,47 @@
+*{
+    outline: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body{
+    background-color:$main-bg-color;
+    background:url($default_Background);
+    font-family:'微軟正黑體'
+}
+
+.slider {
+    width: 650px;
+    height: 650px;
+    @include absolute($top:0);
+    .slick-list{
+        overflow: visible;
+    }
+}
+  
+  .slide {
+    width: 600px;
+    height: 650px;
+  }
+
+.progressArea{
+    width:5px;
+    height:200px;
+    border:1px solid $txt-color;
+    background:transparent;
+    @include absolute($left:50%,$bottom:-10%);
+    .progress{
+        background:$txt-color;
+    }
+}
+
+a.logo {
+    background: $sub-bg;
+    max-width: 300px;
+    padding: 20px;
+    @include fixed($right:0,$bottom:0);
+    @include z-index(logo);
+}
+
+
+

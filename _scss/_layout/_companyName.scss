@@ -1,0 +1,92 @@
+.companyNameArea{
+    width:1000px;
+    height:785px;
+    display: flex;
+    justify-content: space-between;  //左右平均
+    flex-flow: wrap;
+    align-content: space-between;    //上下平均
+    @include fixed($top:50%,$left:50%);
+    @include z-index(companyNameArea);
+    @include transform(translateX(-50%)translateY(-50%)scale(.7));
+    @include media-max('md'){
+        @include transform(translateX(-50%)translateY(-50%)scale(.6));
+    }
+    @include media-max('sm'){
+        @include transform(translateX(-50%)translateY(-50%)scale(.45));
+    }
+    @include media-max('xs'){
+        width:800px;
+        height:1000px;
+        @include transform(translateX(-50%)translateY(-50%)scale(.4));
+    }
+    .companyName{
+        width:50%;
+        @each $item in $companyNameList{
+            .name-#{$item}{
+                width: 369px;
+                height: 355px;
+                @if($item == '01'){ 
+                    &.normal{
+                        @include imgBg(map-get($companyNameBg,'01'),false,false,false,contain,no-repeat,top);
+                    }
+                    &.cover{
+                        @include imgBg(map-get($companyNameBg,'01-hover'),false,false,false,contain,no-repeat,top);
+                    }
+                }
+                @if($item =='02'){ 
+                    float:right;
+                    &.normal{
+                        @include imgBg(map-get($companyNameBg,'02'),false,false,false,contain,no-repeat,top);
+                    }
+                    &.cover{
+                        @include imgBg(map-get($companyNameBg,'02-hover'),false,false,false,contain,no-repeat,top);
+                    }
+                }
+                @if($item =='03'){ 
+                    &.normal{
+                        @include imgBg(map-get($companyNameBg,'03'),false,false,false,contain,no-repeat,bottom);
+                    }
+                    &.cover{
+                        @include imgBg(map-get($companyNameBg,'03-hover'),false,false,false,contain,no-repeat,top);
+                    }
+                }
+                @if($item =='04'){ 
+                    float:right;
+                    &.normal{
+                        @include imgBg(map-get($companyNameBg,'04'),false,false,false,contain,no-repeat,bottom);
+                    
+                    }
+                    &.cover{
+                        @include imgBg(map-get($companyNameBg,'04-hover'),false,false,false,contain,no-repeat,top);
+                    }
+                }
+            }
+        }
+    }  
+}
+
+@include keyframes(changeCompanyGameBg01){
+    0%{
+        background-image:url(map-get($companyNameBg,'01'));
+       
+    }
+    50%{
+        background-image:url(map-get($companyNameBg,'01-hover'));
+        
+    }
+    100%{
+        background-image:url(map-get($companyNameBg,'01'));
+    }
+}
+
+@include keyframes(changeCompanyGameBg02){
+    0%{
+        background-image:url(map-get($companyNameBg,'02'))
+    }
+    50%{
+        background-image:url(map-get($companyNameBg,'02-hover'))
+    }
+    100%{
+        background-image:url(map-get($companyNameBg,'02'))
+    }
+}

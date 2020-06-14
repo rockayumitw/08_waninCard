@@ -1,0 +1,77 @@
+//第三層動畫
+    .animation-layer-03{
+        display:none;
+        &.active{
+            display:block;
+        }
+        .slogan{
+            @each $name in $sloganList{
+                &.splitword-#{$name}{
+                    @if($name == '01'){
+                        @include absolute($top:10%,$left:15%);
+                    }
+                    @if($name == '02'){
+                        @include absolute($top:20%,$left:40%);
+                    }
+                    @if($name == '03'){
+                        @include absolute($top:45%,$left:15%);
+                    }
+                    @if($name == '04'){
+                        @include absolute($top:50%,$left:45%);
+                    }
+                }
+            }
+        }
+        .cloud{
+            opacity:0;
+            @include absolute($top:50%,$left:-10%);
+            @include animation(cloudMove, 5s, $timing-function: linear, $delay: false, $iteration-count: infinite , $direction: alternate, $fill-mode:forwards);
+        }
+        .fan{
+            width:296px;
+            height:180px;
+            background:url($fan);
+            @include absolute($bottom:0,$left:-10%);
+            &.fanAnimation-open{
+                @include animation(fanOpen, .4s, $timing-function: steps(4), $delay: false, $iteration-count: 1 , $direction: normal, $fill-mode:forwards);
+            }
+            &.fanAnimation-close{
+                @include animation(fanClose, .4s, $timing-function: steps(4), $delay: false, $iteration-count: 1 , $direction: normal, $fill-mode:forwards);
+            }
+          
+        }
+    }
+
+
+//cloud
+@include keyframes(cloudMove){
+    0% {
+        left: -10%;
+        opacity:1;
+    }
+    100% {
+        left: 10%;
+        opacity:1;
+    } 
+}
+
+
+//fanOpen
+@include keyframes(fanOpen){
+    0% {
+        background-position: 0px;
+    }
+    100% {
+        background-position: -1180px;
+    } 
+}
+
+//fanClose
+@include keyframes(fanClose){
+    0% {
+        background-position: -1180px;
+    }
+    100% {
+        background-position: 0px
+    } 
+}

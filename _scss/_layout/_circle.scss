@@ -1,0 +1,66 @@
+//圓形動畫
+.circleArea{
+    .circle{
+        
+        border-radius:100%;
+        width:700px;
+        height:700px;
+        margin-top:-350px;
+        @include fixed($top:50%);
+        @include z-index(circleArea);
+        @include animation(rotateMove, 8s, $timing-function: linear, $delay: false, $iteration-count: infinite , $direction: 8s);
+        @include border('false', 1px, solid,rgba(193, 175, 114, 0.38));
+        @include media-max('sm'){
+            width:500px;
+            height:500px;
+            margin-top:-250px;
+        }
+        &.circle-left{
+            margin-left: -350px;
+            @include media-max('sm'){
+                margin-left: -250px;
+            }
+        }
+        &.circle-right{
+            right: 0;
+            margin-right: -350px;
+            @include media-max('sm'){
+                margin-left: -250px;
+            }
+        }
+        img{
+            position: absolute;
+            top: 34%;
+            @include media-max('sm'){
+                top: 30%;
+            }
+            @include animation(scaleMove, 2s, $timing-function: linear, $delay: false, $iteration-count: infinite , $direction: normal);
+        }
+    }
+    @include media-max('xs'){
+        display:none;
+    }
+}
+
+//circle-旋轉
+@include keyframes(rotateMove) {
+    0% {
+        @include transform(rotate(0deg));
+    }
+    100% {
+        @include transform(rotate(360deg));
+    } 
+}
+
+//dot-scale
+@include keyframes(scaleMove){
+    0% {
+        @include transform(scale(1) rotate(0deg));
+    }
+    50% {
+        @include transform(scale(0.5) rotate(180deg));
+    }
+    100% {
+        @include transform(scale(1) rotate(360deg));
+    } 
+}

@@ -1,0 +1,154 @@
+    //第一層動畫
+    .animation-layer-01{
+        display:none;
+        &.active{
+            display:block;
+        }
+        .year{
+            @include absolute($top:10%);
+        }
+        .star{
+            @include absolute($left:39%,$top:44%);
+            &.active{
+                @include animation(lightShow, 5s, $timing-function: linear, $delay: false, $iteration-count: infinite , $direction: alternate, $fill-mode:forwards);
+            }
+            
+        }
+        .txt{
+            overflow: hidden;
+            @include transform(rotate(90deg));
+            @include transform-origin(left top);
+            @include absolute($top:16px,$left:60%);
+            @include animation(txtMove, 1s, $timing-function:linear, $delay: 0s, $iteration-count: 1 , $direction: normal ,$fill-mode: forwards);
+            span{
+                 position: relative;
+                 font-size: 16px;
+                 color: $txt-color;
+                 font-weight: 300;
+                 display: table;
+                 line-height: 22px;
+                &:after{
+                    content: '';
+                    border-bottom:1px solid $txt-border;
+                    background-color:$txt-border;
+                    width: 144px;
+                    height: 1px;
+                    opacity: .6;
+                    @include absolute($right: 0,$bottom: 0px);
+                }
+            }
+            
+        }
+
+        .cloud{
+            position: absolute;
+            &.cloud-left{
+                left: -20%;
+                top: 55%;
+                @include animation(cloudMove01_left, 5s, $timing-function: linear, $delay: false, $iteration-count: infinite , $direction: alternate, $fill-mode:forwards);
+            }
+            &.cloud-right{
+                right: -20%;
+                top: 55%;
+                @include animation(cloudMove01_right, 5s, $timing-function: linear, $delay: false, $iteration-count: infinite , $direction: alternate, $fill-mode:forwards);
+            }
+        }
+
+        .flower{
+            position:absolute;
+            &.flower-big{
+                &.flower-front{
+                    top:70%;
+                    left:-4%;
+                    opacity:0;
+                     @include animation(flowerBig, 1s, $timing-function:ease-in-out, $delay: 0s, $iteration-count: normal , $direction: normal,$fill-mode: forwards);
+                }
+                &.flower-back{
+                    top:80%;
+                    left:10%;
+                    opacity:0;
+                    @include animation(flowerBig, 1s, $timing-function:ease-in-out, $delay: 0.2s, $iteration-count: normal , $direction: normal,$fill-mode: forwards);
+                }
+            }
+            &.flower-small{
+                &.flower-top{
+                    top: 70%;
+                    left: 10%;
+                }
+                &.flower-right{
+                    top: 80%;
+                    left: 32%;
+                    width:40px;
+                }
+                &.flower-bottom{
+                    bottom: -1%;
+                    left: 0%;
+                    width:30px;
+                }
+                @include animation(flowerSmall, 2s, $timing-function:linear, $delay: 0s, $iteration-count: infinite , $direction: normal ,$fill-mode: false);
+            }   
+        }
+    }
+
+
+
+//star動畫
+@include keyframes(lightShow){
+    0%{
+       @include transform(rotate(0deg));
+    }
+    100%{
+        @include transform(rotate(360deg));
+    }
+}
+
+//txt動畫
+@include keyframes(txtMove){
+    0%{
+        opacity:0;
+        width: 150px;
+        padding-left: 0px;
+     }
+     100%{
+        opacity:1;
+        width: 150px;
+        padding-left:65px;
+     }
+}
+
+
+//flower動畫
+@include keyframes(flowerBig){
+    0%{
+       @include transform(scale(0) rotate(0deg));
+       opacity:0;
+    }
+    100%{
+        @include transform(scale(1) rotate(180deg));
+        opacity:1;
+    }
+}
+@include keyframes(flowerSmall){
+    0%{
+       @include transform(rotate(0deg));
+    }
+    100%{
+        @include transform(rotate(-360deg));
+    }
+}
+@include keyframes(cloudMove01_left){
+    0% {
+        left: -20%;
+    }
+    100% {
+        left: -10%;
+    } 
+}
+@include keyframes(cloudMove01_right){
+    0% {
+        right: -20%;
+    }
+    100% {
+        right: -10%;
+    } 
+}
